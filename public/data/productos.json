@@ -1,0 +1,92 @@
+ [
+    
+        {
+         "id":1,
+         "title": "Marinara",
+         "price": 1550,
+         "img": "p1.jpg"
+         },
+        {
+         "id":2,
+         "title": "Calzone",
+          "price":1700,
+          "img": "p2.jpg"
+          
+
+         },
+        {
+         "id":3,
+         "title": "Fugazza",
+         "price": 1700,
+         "img":"p3.jpg"
+          
+         },
+        {
+         "id":4,
+         "title": "Mozzarella",
+         "price": 1700,
+         "img": "p4.jpg"
+      },
+   {
+         "id":5,
+         "title": "4Quesos",
+         "price": 1800,
+         "img": "p5.jpg" 
+      },
+        {
+         "id":6,
+         "title": "Papa", 
+         "price": 1800,
+         "img": "p6.jpg"
+         },
+        {
+         "id":7,
+         "title": "Rucula", 
+        "price": 1800,
+        "img": "p7.jpg"
+         },
+        {
+         "id":8,
+         "title": "Caprese",
+         "price": 1850,
+         "img": "p8.jpg" 
+         },
+        {
+         "id":9,
+         "title": "Margherit",
+         "price": 1850,
+         "img": "p9.jpg"
+         },
+        {
+         "id":10,
+         "title": "JamonyMorron",
+         "price": 1850,
+         "img": "p10.jpg" 
+         },
+        {
+         "id":11,
+         "title": "Caprichosa",
+         "price": 1850,
+         "img": "p11.jpg" 
+         },
+        {
+         "id":12,
+         "title": "Diavola",
+         "price": 1850,
+         "img": "p12.jpg" 
+         },
+        {
+         "id":13,
+         "title": "Anchoas",
+         "price": 1900,
+         "img": "p13.jpg" 
+         },
+        {
+          "id":14,
+          "title": "Mazzanta", 
+          "price": 2100,
+          "img": "p14.jpg"
+         }
+    
+     ]
+   
