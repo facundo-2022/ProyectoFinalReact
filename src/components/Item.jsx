@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ItemCount } from "./ItemCount";
+import { ItemCount } from "./ItemDetails";
 
 export const Item = ({ product }) => {
     const [quantity, setQuantity] = useState(1);
