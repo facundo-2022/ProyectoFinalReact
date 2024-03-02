@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { ItemCount } from "./ItemDetails";
+import "./Item.css"; // Importar el archivo CSS
 
 export const Item = ({ product }) => {
     const [quantity, setQuantity] = useState(1);
     const [isFlipped, setIsFlipped] = useState(false);
 
-    const handleAddToCart = (count) => {
+    const handleAddToCart = () => {
         // Aquí puedes manejar la lógica para agregar el producto al carrito
-        console.log(`Agregado al carrito: ${count} ${product.title}`);
+        console.log(`Agregado al carrito: ${quantity} ${product.title}`);
     };
 
     const flipCard = () => {
@@ -15,25 +16,26 @@ export const Item = ({ product }) => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url('../img/fondo.jpg')` , backgroundRepeat: 'no-repeat' }}>
-            <div className={`max-w-xs mx-auto bg-gray-200 p-3 rounded-md shadow-md mb-4 ${isFlipped ? 'rotate' : ''}`} onClick={flipCard}>
-                <div className={`card ${isFlipped ? 'is-flipped' : ''}`}>
-                    <div className="front">
-                        <img src={`../img/${product.img}`} alt={`Imagen de ${product.title}`} />
-                        <h2 className="text-lg font-semibold font-bold mb-2 flex justify-between items-center">
-                            <span>{product.title}</span>
-                            <span>${product.price}</span>
-                        </h2>
-                        <div className="back">
-                            <p>Otra información relevante sobre el producto</p>
-                        </div>
-                        <div className="flex justify-between items-center">
-                            <div className="flex items-center">
-                                <ItemCount onAdd={handleAddToCart} />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div className={`card ${isFlipped ? 'is-flipped' : ''}`} onClick={flipCard}>
+            <div className="thumb">
+                <img src={`../img/${product.img}`} alt={`Imagen de ${product.title}`} />
+            </div>
+            <div className="infos">
+                <h2 className="title">
+                    {product.title}<span className="flag"></span>
+                    <img src="../img/logo.jpg" alt="Logo" className="logo" /> 
+                </h2>
+                <br />
+                <p className="txt">
+                    Descripción: {product.description}
+                </p>
+                <br />
+                <h3 className="date">Precio (2 personas): ${product.priceNormal}</h3>
+                <h3 className="date">Precio (1 persona): ${product.pricemedium}</h3>
+                
+                <hr />
+                <br />
+                <button className="addToCartBtn" onClick={handleAddToCart}>Agregar al carrito</button>
             </div>
         </div>
     );

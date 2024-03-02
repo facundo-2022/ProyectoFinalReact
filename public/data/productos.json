@@ -3,90 +3,124 @@
         {
          "id":1,
          "title": "Marinara",
-         "price": 1550,
-         "img": "p1.jpg"
+         "priceNormal": 7800 ,
+          
+         "img": "p1.jpg",
+         "description": "Salsa de tomate italiano,láminas de ajo,hojas de albahaca,eceite de oliva virgen extra y oregano."
          },
         {
          "id":2,
          "title": "Calzone",
-          "price":1700,
-          "img": "p2.jpg"
-          
+         "priceNormal": 6800,
+          "img": "p2.jpg",
+          "description": "Salsa de tomate, mozzarella,ricota, salame tipo crespón, albhaca y pimienta negra."
 
          },
         {
          "id":3,
          "title": "Fugazza",
-         "price": 1700,
-         "img":"p3.jpg"
+         "priceNormal": 6000 ,
+          "pricemedium": 4500,
+         "img":"p3.jpg",
+         "description": "Cebolla, mozzarella y oregano."
           
          },
         {
          "id":4,
          "title": "Mozzarella",
-         "price": 1700,
-         "img": "p4.jpg"
+         "priceNormal": 6000 ,
+          "pricemedium": 4500 ,
+         "img": "p4.jpg",
+         "description": "Salsa de tomate, mozzarella, aceitunas verdes y orégano."
       },
    {
          "id":5,
          "title": "4Quesos",
-         "price": 1800,
-         "img": "p5.jpg" 
+         "priceNormal": 6400 ,
+          "pricemedium": 4600 ,
+         "img": "p5.jpg",
+         "description": "Salsa de tomate, mozzarella, roquefort, tybo y parmesano. " 
       },
         {
          "id":6,
          "title": "Papa", 
-         "price": 1800,
-         "img": "p6.jpg"
+         "priceNormal": 6400 ,
+          "pricemedium": 4600 ,
+         "img": "p6.jpg",
+         "description": "Salsa de tomate, papas fritas, mozzarella y romero."
          },
         {
          "id":7,
          "title": "Rucula", 
-        "price": 1800,
-        "img": "p7.jpg"
+         "priceNormal": 7000 ,
+         "pricemedium": 5200 ,
+        "img": "p7.jpg",
+        "description": "Salsa de tomate, mozzarella, rucula, jámon crudo y aceite de oliva virgen extra."
          },
         {
          "id":8,
          "title": "Caprese",
-         "price": 1850,
-         "img": "p8.jpg" 
+         "priceNormal": 7400 ,
+          "pricemedium": 5600 ,
+         "img": "p8.jpg",
+         "description": "Salsa de tomate, mozzarella, tomates cherry, joas de albahaca, aceitunas negras y aceite de ajo." 
          },
         {
          "id":9,
-         "title": "Margherit",
-         "price": 1850,
-         "img": "p9.jpg"
+         "title": "Margherita",
+         "priceNormal": 7400 ,
+          "pricemedium": 5600 ,
+         "img": "p9.jpg",
+         "description": "Salsa de tomate italinano, mozzarella flor di latte, parmesano, hojas de albahaca y aceite de oliva virgen extra."
          },
         {
          "id":10,
-         "title": "JamonyMorron",
-         "price": 1850,
-         "img": "p10.jpg" 
+         "title": "Jamon & Morrón",
+         "priceNormal": 7400 ,
+          "pricemedium": 5600 ,
+         "img": "p10.jpg",
+         "description": "Salsa de tomate, mozzarella, morron rojo, jamóncocido, aceitunas verdes y orégano." 
          },
         {
          "id":11,
          "title": "Caprichosa",
-         "price": 1850,
-         "img": "p11.jpg" 
+         "priceNormal": 7400 ,
+          "pricemedium": 5600 ,
+         "img": "p11.jpg",
+         "description": "Salsa de tomate, mozzarella, jamón cocido, champignones y pesto de perejil." 
          },
         {
          "id":12,
          "title": "Diavola",
-         "price": 1850,
-         "img": "p12.jpg" 
+         "priceNormal": 7800 ,
+          "pricemedium": 6000 ,
+         "img": "p12.jpg",
+         "description": "Salsa de tomate, mozzarella, chorizo cantimpalo, cebolla, aceite de pimentón suave y orégano." 
          },
         {
          "id":13,
          "title": "Anchoas",
-         "price": 1900,
-         "img": "p13.jpg" 
+         "priceNormal": 7800 ,
+          "pricemedium": 6000 ,
+         "img": "p13.jpg",
+         "description": "Salsa detomate, mozzarella, anchoas, aceitunas negras y pimentón dulce." 
          },
         {
           "id":14,
-          "title": "Mazzanta", 
-          "price": 2100,
-          "img": "p14.jpg"
-         }
+          "title": "Pepperoni", 
+          "priceNormal": 7800 ,
+          "pricemedium": 6000 ,
+          "img": "p14.jpg",
+          "description": "Salsa arrabbiata, mozzarella, pepperoni."
+         },
+         {
+            "id":15,
+            "title": "Mazzanta", 
+            "priceNormal": 7800 ,
+            "pricemedium": 6000 ,
+            "img": "p14.jpg",
+            "description": "Salsa arrabbiata, mozzarella, pepperoni."
+           }
     
      ]
    

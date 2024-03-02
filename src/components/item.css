@@ -1,43 +1,202 @@
-.card {
-    width: 100%;
-    height: 100%;
+/* Define the font face */
+@font-face {
+    font-family: "Grotesque";
+    src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/BrandonGrotesque-Regular.eot"),
+        url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/BrandonGrotesque-Regular.ttf"),
+        url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/BrandonGrotesque-Regular.woff");
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Grotesque Black";
+    src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/BrandonGrotesque-Black.eot"),
+        url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/BrandonGrotesque-Black.ttf"),
+        url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/BrandonGrotesque-Black.woff");
+    font-weight: bold;
+}
+
+/* Box model reset */
+* {
+    box-sizing: border-box;
+}
+
+/* Set base font size */
+html,
+body {
+    font-size: 100%;
+}
+
+/* Reset body margin and padding */
+body {
+    padding: 0;
+    margin: 0;
+    background: black;
+}
+
+/* Style for links */
+a[href] {
     position: relative;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
+}
+a[href],
+a[href]:link,
+a[href]:visited,
+a[href]:active {
+    text-decoration: none;
+    color: #d8276c;
+    text-shadow: 2px 2px 2px #070c11;
+    padding-bottom: 3px;
+    font-weight: bold;
+}
+a[href]::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    width: 0;
+    height: 1px;
+    transition: 0.35s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+}
+a[href]:hover::after {
+    width: 100%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
-.card.rotate {
-    transform: rotateY(180deg);
+/* Styling for notes */
+.note {
+    margin-top: 30px;
+    color: #fff;
+    font-size: 1rem;
+    font-family: "Merriweather", sans-serif;
+    line-height: 1.5;
+    text-align: center;
 }
 
-.card.is-flipped .front {
-    transform: rotateY(-180deg);
+/* Card container styling */
+.card {
+    width: 350px;
+    height: 350px;
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
 }
 
-.card.is-flipped .back {
-    transform: rotateY(0deg);
+/* Thumbnail styling */
+.card .thumb {
+    height: 260px;
+    background-size: cover;
+    border-radius: 3px;
 }
 
-.front,
-.back {
+/* Image styling to maintain aspect ratio */
+.card .thumb img {
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden;
+    object-fit: cover;
 }
 
-.front {
-    z-index: 2;
+/* Info container styling */
+.card .infos {
+    padding: 14px 24px;
+    background: #fff;
+    transition: 0.4s 0.15s cubic-bezier(0.17, 0.67, 0.5, 1.03);
 }
 
-.back {
-    transform: rotateY(180deg);
-    background-color: #f0f0f0;
-    color: #333;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Title styling */
+.card .infos .title {
+    margin: 10px 0;
+    letter-spacing: 3px;
+    color: #152536;
+    font-family: "Grotesque Black", sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 0px #32577f;
+}
+
+/* Logo styling */
+.card .infos .title .logo {
+    display: inline-block;
+    width: 40px; /* Ajustar el ancho del logo */
+    height: 40px; /* Ajustar la altura del logo */
+    background-image: url('ruta/a/tu/logo.png'); /* URL de la imagen del logo */
+    background-size: cover;
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+/* Flag styling */
+.card .infos .flag {
+    width: 35px;
+    height: 23px;
+    background-size: 100% auto;
+    display: inline-block;
+}
+
+/* Date and seats styling */
+.card .infos .date,
+.card .infos .seats {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    color: rgba(21, 37, 54, 0.7);
+    font-family: "Grotesque", sans-serif;
+}
+
+/* Seats styling */
+.card .infos .seats {
+    display: inline-block;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+}
+
+/* Text styling */
+.card .infos .txt {
+    line-height: 2;
+    font-size: 0.95rem;
+    color: rgba(21, 37, 54, 0.7);
+    opacity: 0;
+    transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+}
+
+/* Details styling */
+.card .infos .details {
+    margin: 10px 0;
+    padding: 20px 24px;
+    letter-spacing: 1px;
+    color: #4e958b;
+    font-family: "Grotesque Black", sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+}
+
+/* Card hover effect */
+.card:hover .infos {
+    transform: translateY(-260px);
+}
+.card:hover .infos .seats,
+.card:hover .infos .txt,
+.card:hover .infos .details {
+    opacity: 1;
+}
+
+/* Button styling */
+.addToCartBtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+.addToCartBtn:hover {
+    background-color: #45a049;
 }
