@@ -1,15 +1,11 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { useCarritoContext } from "../context/CartContext";
 import { ItemCount } from "./ItemDetails";
-import "./Item.css"; // Importar el archivo CSS
+import "./Item.css";
 
 export const Item = ({ product }) => {
-    const [quantity, setQuantity] = useState(1);
     const [isFlipped, setIsFlipped] = useState(false);
-
-    const handleAddToCart = () => {
-        // Aquí puedes manejar la lógica para agregar el producto al carrito
-        console.log(`Agregado al carrito: ${quantity} ${product.title}`);
-    };
+    const { addItem } = useCarritoContext();
 
     const flipCard = () => {
         setIsFlipped(!isFlipped);
@@ -34,8 +30,7 @@ export const Item = ({ product }) => {
                 <h3 className="date">Precio (1 persona): ${product.pricemedium}</h3>
                 
                 <hr />
-                <br />
-                <button className="addToCartBtn" onClick={handleAddToCart}>Agregar al carrito</button>
+                <ItemCount item={product} />
             </div>
         </div>
     );
