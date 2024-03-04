@@ -47,7 +47,7 @@ export const CarritoProvider = ({ children }) => { // Forma de proveer el contex
 
     // Obtener precio total del carrito
     const totalPrice = () => {
-        return carrito.reduce((acum, prod) => acum += (prod.quantity * prod.price), 0);
+        return carrito.reduce((acum, prod) => acum += (prod.quantity * prod.priceNormal), 0);
     };
 
     console.log(carrito);
