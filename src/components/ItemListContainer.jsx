@@ -13,7 +13,7 @@ export const ItemListContainer = () => {
     return (
        <div className="min-h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url('../img/fondo.jpg')` , backgroundRepeat: 'no-repeat' }}> 
        <div className=" flex flex-wrap gap-4"> 
-            <ItemList products={products} />
+            <ItemList products={products} plantilla= "Item"/>
         </div>
         </div>
     )

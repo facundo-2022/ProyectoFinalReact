@@ -4,7 +4,7 @@ const CarritoContext = createContext(); // Creando el contexto (por el momento v
 
 export const useCarritoContext = () => useContext(CarritoContext); // Función para consultar mi contexto en otros componentes
 
-export const CarritoProvider = (props) => { // Forma de proveer el contexto, puede recibir props
+export const CarritoProvider = ({ children }) => { // Forma de proveer el contexto, puede recibir props
 
     const [carrito, setCarrito] = useState([]);
 
@@ -54,7 +54,7 @@ export const CarritoProvider = (props) => { // Forma de proveer el contexto, pue
     
     return (
         <CarritoContext.Provider value={{ carrito, addItem, removeItem, emptyCart, getItemQuantity, totalPrice }}>
-            {props.children}
+            {children}
         </CarritoContext.Provider>
     );
 };
