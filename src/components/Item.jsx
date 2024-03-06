@@ -14,7 +14,7 @@ export const Item = ({ product }) => {
     return (
         <div className={`card ${isFlipped ? 'is-flipped' : ''}`} onClick={flipCard}>
             <div className="thumb">
-                <img src={`../img/${product.img}`} alt={`Imagen de ${product.title}`} />
+                <img src={`${product.img}`} alt={`Imagen de ${product.title}`} />
             </div>
             <div className="infos">
                 <h2 className="title">

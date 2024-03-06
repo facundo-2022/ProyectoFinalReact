@@ -1,124 +1,123 @@
  [
     
         {
-         "id":1,
+        
          "title": "Marinara",
          "priceNormal": 7800 ,
-          
-         "img": "p1.jpg",
+         "img": "https://firebasestorage.googleapis.com/v0/b/pizzeria-mazzanta.appspot.com/o/p1.jpg?alt=media&token=f5e4ff78-c9bf-4579-895b-d71409452efd",
          "description": "Salsa de tomate italiano,láminas de ajo,hojas de albahaca,eceite de oliva virgen extra y oregano."
          },
         {
-         "id":2,
+       
          "title": "Calzone",
          "priceNormal": 6800,
-          "img": "p2.jpg",
+          "img": "https://firebasestorage.googleapis.com/v0/b/pizzeria-mazzanta.appspot.com/o/p2.jpg?alt=media&token=dbd7c470-8ae6-478a-aceb-8e7c2f8247a3",
           "description": "Salsa de tomate, mozzarella,ricota, salame tipo crespón, albhaca y pimienta negra."
 
          },
         {
-         "id":3,
+       
          "title": "Fugazza",
          "priceNormal": 6000 ,
           "pricemedium": 4500,
-         "img":"p3.jpg",
+         "img":"https://firebasestorage.googleapis.com/v0/b/pizzeria-mazzanta.appspot.com/o/p3.jpg?alt=media&token=6ad81247-a8cb-4814-bcb1-0d6562f0047d",
          "description": "Cebolla, mozzarella y oregano."
           
          },
         {
-         "id":4,
+         
          "title": "Mozzarella",
          "priceNormal": 6000 ,
           "pricemedium": 4500 ,
-         "img": "p4.jpg",
+         "img": "https://firebasestorage.googleapis.com/v0/b/pizzeria-mazzanta.appspot.com/o/p4.jpg?alt=media&token=05703e02-8913-4a25-b2d5-641c4b47667d",
          "description": "Salsa de tomate, mozzarella, aceitunas verdes y orégano."
       },
    {
-         "id":5,
+         
          "title": "4Quesos",
          "priceNormal": 6400 ,
           "pricemedium": 4600 ,
-         "img": "p5.jpg",
+         "img": "https://firebasestorage.googleapis.com/v0/b/pizzeria-mazzanta.appspot.com/o/p5.jpg?alt=media&token=56cfe0e3-07c1-474c-b321-6afae66be4cc",
          "description": "Salsa de tomate, mozzarella, roquefort, tybo y parmesano. " 
       },
         {
-         "id":6,
+        
          "title": "Papa", 
          "priceNormal": 6400 ,
           "pricemedium": 4600 ,
-         "img": "p6.jpg",
+         "img": "https://firebasestorage.googleapis.com/v0/b/pizzeria-mazzanta.appspot.com/o/p6.jpg?alt=media&token=53e768f9-5fa2-40cc-aa9b-70e165e754de",
          "description": "Salsa de tomate, papas fritas, mozzarella y romero."
          },
         {
-         "id":7,
+         
          "title": "Rucula", 
          "priceNormal": 7000 ,
          "pricemedium": 5200 ,
-        "img": "p7.jpg",
+        "img": "https://firebasestorage.googleapis.com/v0/b/pizzeria-mazzanta.appspot.com/o/p7.jpg?alt=media&token=c63ff133-6916-4818-bd36-ab34d1da8ec8",
         "description": "Salsa de tomate, mozzarella, rucula, jámon crudo y aceite de oliva virgen extra."
          },
         {
-         "id":8,
+       
          "title": "Caprese",
          "priceNormal": 7400 ,
           "pricemedium": 5600 ,
-         "img": "p8.jpg",
+         "img": "https://firebasestorage.googleapis.com/v0/b/pizzeria-mazzanta.appspot.com/o/p8.jpg?alt=media&token=05327a5a-f0c9-4f28-99d4-fe6af4b007c6",
          "description": "Salsa de tomate, mozzarella, tomates cherry, joas de albahaca, aceitunas negras y aceite de ajo." 
          },
         {
-         "id":9,
+         
          "title": "Margherita",
          "priceNormal": 7400 ,
           "pricemedium": 5600 ,
-         "img": "p9.jpg",
+         "img": "https://firebasestorage.googleapis.com/v0/b/pizzeria-mazzanta.appspot.com/o/p10.jpg?alt=media&token=cb9dd752-8e6c-43f9-af52-b26431f20eab",
          "description": "Salsa de tomate italinano, mozzarella flor di latte, parmesano, hojas de albahaca y aceite de oliva virgen extra."
          },
         {
-         "id":10,
+         
          "title": "Jamon & Morrón",
          "priceNormal": 7400 ,
           "pricemedium": 5600 ,
-         "img": "p10.jpg",
+         "img": "https://firebasestorage.googleapis.com/v0/b/pizzeria-mazzanta.appspot.com/o/qw.jpg?alt=media&token=3da76c7d-fd98-4efd-ad8a-984f13627855",
          "description": "Salsa de tomate, mozzarella, morron rojo, jamóncocido, aceitunas verdes y orégano." 
          },
         {
-         "id":11,
+         
          "title": "Caprichosa",
          "priceNormal": 7400 ,
           "pricemedium": 5600 ,
-         "img": "p11.jpg",
+         "img": "https://firebasestorage.googleapis.com/v0/b/pizzeria-mazzanta.appspot.com/o/p11.jpg?alt=media&token=0b1b8f11-aac5-4081-a741-f8a5a1eea8e8",
          "description": "Salsa de tomate, mozzarella, jamón cocido, champignones y pesto de perejil." 
          },
         {
-         "id":12,
+        
          "title": "Diavola",
          "priceNormal": 7800 ,
           "pricemedium": 6000 ,
-         "img": "p12.jpg",
+         "img": "https://firebasestorage.googleapis.com/v0/b/pizzeria-mazzanta.appspot.com/o/p13.jpg?alt=media&token=8ae0a544-8f0f-4d0d-954b-f4bd885e4657",
          "description": "Salsa de tomate, mozzarella, chorizo cantimpalo, cebolla, aceite de pimentón suave y orégano." 
          },
         {
-         "id":13,
+        
          "title": "Anchoas",
          "priceNormal": 7800 ,
           "pricemedium": 6000 ,
-         "img": "p13.jpg",
+         "img": "https://firebasestorage.googleapis.com/v0/b/pizzeria-mazzanta.appspot.com/o/sdadsad.jpg?alt=media&token=07d32b1c-5fde-41c6-a01b-2bf4f130ee41",
          "description": "Salsa detomate, mozzarella, anchoas, aceitunas negras y pimentón dulce." 
          },
         {
-          "id":14,
+          
           "title": "Pepperoni", 
           "priceNormal": 7800 ,
           "pricemedium": 6000 ,
-          "img": "p14.jpg",
+          "img": "https://firebasestorage.googleapis.com/v0/b/pizzeria-mazzanta.appspot.com/o/sdadsad.jpg?alt=media&token=07d32b1c-5fde-41c6-a01b-2bf4f130ee41",
           "description": "Salsa arrabbiata, mozzarella, pepperoni."
          },
          {
-            "id":15,
+            
             "title": "Mazzanta", 
             "priceNormal": 7800 ,
             "pricemedium": 6000 ,
-            "img": "p14.jpg",
+            "img": "https://firebasestorage.googleapis.com/v0/b/pizzeria-mazzanta.appspot.com/o/sdadsad.jpg?alt=media&token=07d32b1c-5fde-41c6-a01b-2bf4f130ee41",
             "description": "Salsa arrabbiata, mozzarella, pepperoni."
            }
     
