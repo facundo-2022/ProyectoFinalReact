@@ -5,14 +5,14 @@ export const ItemList = ({ products, plantilla }) => {
     return (
         <>
             {
-                products && products.length > 0 && (
-                    plantilla === 'Item'
-                        ?
-                        products.map(prod => <Item key={prod.id} product={prod} />)
-                        :
-                        products.map(prod => <ItemCart key={prod.id} product={prod} />)
-                )
+                plantilla === 'Item'
+                    ?
+                    products.map(prod => <Item key={prod.id} product={prod} />)
+                    :
+                    products.map(prod => <ItemCart key={prod.id} product={prod} />)
+
             }
         </>
+
     )
 }

@@ -19,7 +19,7 @@ export const Item = ({ product }) => {
             <div className="infos">
                 <h2 className="title">
                     {product.title}<span className="flag"></span>
-                    <img src="../img/logo.jpg" alt="Logo" className="logo" /> 
+                    <img src="https://firebasestorage.googleapis.com/v0/b/pizzeria-mazzanta.appspot.com/o/logo-removebg-preview.png?alt=media&token=330077c0-5a10-497b-bc5c-cc75a450f543" alt="Logo" className="logo" /> 
                 </h2>
                 <br />
                 <p className="txt">

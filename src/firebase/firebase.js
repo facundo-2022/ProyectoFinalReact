@@ -180,12 +180,12 @@ export const createProducts = async () => {
 export const updateProduct = async (id, info) => {
     await updateDoc(doc(bdd, "productos", id), info)
 }
-/* updateProduct('lfvXGkuRZALnSJcYkads',{"pricemedium": 5600,
+ updateProduct('lfvXGkuRZALnSJcYkads',{"pricemedium": 5600,
     "priceNormal": 7400,
     "title": 'Margherita',
     "img": 'https://firebasestorage.googleapis.com/v0/b/pizzeria-mazzanta.appspot.com/o/p10.jpg?alt=media&token=cb9dd752-8e6c-43f9-af52-b26431f20eab',
     "description": 'Salsa de tomate italinano, mozzarella flor di latte, parmesano, hojas de albahaca y aceite de oliva virgen extra.'
-}).then(rta=> console.log(rta)) */
+}).then(rta=> console.log(rta)) 
 
 // Eliminar producto
 

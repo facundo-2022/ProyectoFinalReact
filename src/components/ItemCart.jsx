@@ -15,13 +15,13 @@ export const ItemCart = ({ product }) => {
         setSubtotal(newSubtotal);
     }, [count, product.priceNormal]);
 
-    const handleIncrement = () => {
+    const increment = () => {
         const newCount = count + 1;
         setCount(newCount);
         updateItem(product.id, newCount);
     };
 
-    const handleDecrement = () => {
+    const decrement = () => {
         const newCount = count - 1;
         if (newCount >= 1) {
             setCount(newCount);
@@ -32,28 +32,34 @@ export const ItemCart = ({ product }) => {
     return (
         <div className="flex items-center p-4 border-gray-300">
             <div className="mr-4">
-                <img src={`../img/${product.img}`} alt={`Imagen de ${product.title}`} className="w-24 h-24 object-cover" />
+                <img src={`${product.img}`} alt={`Imagen de ${product.title}`} className="w-24 h-24 object-cover" />
             </div>
             <div className="flex-1">
-                <h3 className="text-lg font-semibold">{product.title} {product.size}</h3>
+                <h3 className="text-lg font-semibold">{product.title} </h3>
             </div>
             <div className="flex items-center">
-                <button className="bg-gray-500 text-white px-4 py-2 rounded" onClick={handleDecrement}>
+                <button className="bg-gray-500 text-white px-4 py-2 rounded" onClick={async () => {
+                    updateItem(product.id, count - 1)
+                    decrement()
+                }}>
                     -
                 </button>
                 <span className="text-xl font-bold">{count}</span>
-                <button className="bg-gray-500 text-white px-4 py-2 rounded" onClick={handleIncrement}>
+                <button className="bg-gray-500 text-white px-4 py-2 rounded" onClick={() => {
+                    updateItem(product.id, count + 1)
+                    increment()
+                }}>
                     +
                 </button>
             </div>
             <div className="ml-4">
-                <p className="text-lg font-semibold">Subtotal: ${subtotal}</p>
+                <p className="text-lg font-semibold">Subtotal: ${product.priceNormal * count}</p>
             </div>
             <div className="ml-4">
-                <button className="bg-red-500 text-white px-4 py-2 rounded" onClick={() => removeItem(product.id)}>
+                <button className="bg-red-500  text-white px4 py-2 rounded" onClick={() => removeItem(product.id)}>
                     Eliminar
                 </button>
             </div>
         </div>
-    );
-};
+    )
+}
