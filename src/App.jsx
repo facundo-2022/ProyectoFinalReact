@@ -8,6 +8,8 @@ import { Checkout } from './components/Checkout';
 import { ItemDetailsContainer } from './components/ItemDetailsContainer';
 import { NotFound } from './components/NotFound';
 import { CarritoProvider } from './context/CartContext.jsx';
+import { Footer } from './components/Footer'
+import { Contacto } from './components/Contacto';
 
 export const App = () => {
   return (
@@ -17,10 +19,14 @@ export const App = () => {
         <Routes>
           <Route path='/' element={<ItemListContainer />} />
           <Route path='/product/:pid' element={<ItemDetailsContainer />} />
+          <Route path='/Contacto' element={<Contacto/>} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/checkout' element={<Checkout />} />
+        
           <Route path='*' element={<NotFound />} />
+
         </Routes>
+        <Footer/>
       </CarritoProvider>
     </BrowserRouter>
   );

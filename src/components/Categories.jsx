@@ -15,10 +15,12 @@ export const Categories = () => {
             </li>
             
             <li className="text-white">
+            <Link to ={'/Contacto'}>
                 <button className="bg-yellow-300 text-white px-4 py-2 rounded flex items-center">
                     <FontAwesomeIcon icon={faMobileScreen} className="mr-2" />
                    
                 </button>
+                </Link>
             </li>
     
         </>

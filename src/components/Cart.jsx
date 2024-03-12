@@ -12,7 +12,7 @@ export const Cart = () => {
                 carrito.length === 0 ?
                     <>
                         <h1>Carrito Vacío</h1>
-                        <button className="bg-green-300 text-white px-2 py-1 rounded-md ml-4 hover:bg-green-500 focus:outline-none flex items-center">
+                        <button className="bg-yellow-300 text-white px-2 py-1 rounded-md ml-4 hover:bg-yellow-500 focus:outline-none flex items-center">
                             <Link to={'/'}>
                                 Volver al inicio
                             </Link>
@@ -21,17 +21,17 @@ export const Cart = () => {
                     :
                     <div>
                         {<ItemList products={carrito} plantilla="ItemCart" />}
-                        <div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px' }}>
                             <p>Resumen de la compra: $ {totalPrice()}</p>
-                            <button className="bg-green-300 text-white px-2 py-1 rounded-md ml-4 hover:bg-green-500 focus:outline-none flex items-center" onClick={emptyCart}>
+                            <button className="bg-yellow-300 text-white px-2 py-1 rounded-md ml-4 hover:bg-yellow-500 focus:outline-none flex items-center" onClick={emptyCart}>
                                 Vaciar Carrito
                             </button>
-                            <button className="bg-green-300 text-white px-2 py-1 rounded-md ml-4 hover:bg-green-500 focus:outline-none flex items-center" >
+                            <button className="bg-yellow-300 text-white px-2 py-1 rounded-md ml-4 hover:bg-yellow-500 focus:outline-none flex items-center" >
                                 <Link to={'/'}>
                                     Continuar Comprando
                                 </Link>
                             </button>
-                            <button className="bg-green-300 text-white px-2 py-1 rounded-md ml-4 hover:bg-green-500 focus:outline-none flex items-center" >
+                            <button className="bg-yellow-300 text-white px-2 py-1 rounded-md ml-4 hover:bg-yellow-500 focus:outline-none flex items-center" >
                                 <Link to={'/checkout'}>
                                     Iniciar pago
                                 </Link>

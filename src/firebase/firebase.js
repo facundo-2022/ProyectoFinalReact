@@ -153,7 +153,7 @@ const prods = [
 
 export const createProducts = async () => {
     prods.forEach(async(prod)=> {
-      const rta = await addDoc(collection(bdd,"productos"),  {
+     await addDoc(collection(bdd,"productos"),  {
         title: prod.title, 
         priceNormal: prod.priceNormal,
         pricemedium: prod.pricemedium,
@@ -166,7 +166,8 @@ export const createProducts = async () => {
   export const getProducts = async () => {
     const productos = await getDocs(collection(bdd, "productos"))
     const items =  productos.docs.map(prod=>{ return{...prod.data(), id: prod.id}})
-    console.log(items)
+  
+  return items
   }
   
   export const getProduct = async (id) => {
@@ -180,13 +181,13 @@ export const createProducts = async () => {
 export const updateProduct = async (id, info) => {
     await updateDoc(doc(bdd, "productos", id), info)
 }
- updateProduct('lfvXGkuRZALnSJcYkads',{"pricemedium": 5600,
+ /* updateProduct('lfvXGkuRZALnSJcYkads',{"pricemedium": 5600,
     "priceNormal": 7400,
     "title": 'Margherita',
     "img": 'https://firebasestorage.googleapis.com/v0/b/pizzeria-mazzanta.appspot.com/o/p10.jpg?alt=media&token=cb9dd752-8e6c-43f9-af52-b26431f20eab',
     "description": 'Salsa de tomate italinano, mozzarella flor di latte, parmesano, hojas de albahaca y aceite de oliva virgen extra.'
 }).then(rta=> console.log(rta)) 
-
+ */
 // Eliminar producto
 
 export const deleteProduct = async (id) => {
@@ -194,3 +195,20 @@ export const deleteProduct = async (id) => {
 }
 
 
+export const createOrdenCompra = async (cliente, precioTotal, carrito, fecha) => {
+  const ordenCompra = await addDoc(collection(bdd, "ordenesCompra"), {
+      cliente: cliente,
+      items: carrito,
+      precioTotal: precioTotal,
+      fecha: fecha
+  })
+  return ordenCompra
+}
+
+export const getOrdenCompra = async (id) => {
+  const ordenCompra = await getDoc(doc(bdd, "ordenesCompra", id))
+  const item = { ...ordenCompra.data(), id: ordenCompra.id }
+  return item
+}
+
+getProducts()
