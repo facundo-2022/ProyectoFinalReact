@@ -10,8 +10,8 @@ export const Navbar = () => {
     };
 
     return (
-        <nav className="p-6 mb-6 relative" style={{ backgroundImage: `url('https://firebasestorage.googleapis.com/v0/b/pizzeria-mazzanta.appspot.com/o/cabezal.jpg?alt=media&token=bf2db2c0-49af-4708-a10a-cec25ec6cfd6')`, backgroundRepeat: 'no-repeat', backgroundSize:' cover' }}>
-            <div className="container mx-auto relative z-10">
+        <nav className="p-6 mb-6" style={{ backgroundImage: `url('https://firebasestorage.googleapis.com/v0/b/pizzeria-mazzanta.appspot.com/o/cabezal.jpg?alt=media&token=bf2db2c0-49af-4708-a10a-cec25ec6cfd6')`, backgroundRepeat: 'no-repeat', backgroundSize:' cover' }}>
+            <div className="container mx-auto">
                 <div className="flex items-center justify-between">
                     <img src="https://firebasestorage.googleapis.com/v0/b/pizzeria-mazzanta.appspot.com/o/logo-removebg-preview.png?alt=media&token=330077c0-5a10-497b-bc5c-cc75a450f543" alt="Logo" className="h-16 w-auto ease-in duration-300" />
                     <h1 className="text-white text-2xl font-bold italic flex-grow text-center"> Pizzeria Mazzanta</h1>
@@ -26,7 +26,7 @@ export const Navbar = () => {
                             </svg>
                         </button>
                     </div>
-                    <ul className={`lg:flex lg:space-x-4 ${menuOpen ? 'block' : 'hidden'} absolute top-full left-0 bg-white w-full p-4 lg:relative lg:w-auto z-20`} style={{ textAlign: 'center' }}>
+                    <ul className={`flex space-x-4 lg:flex lg:space-x-4 ${menuOpen ? 'block' : 'hidden'}`}>
                         <Categories />
                         <CartWidget />
                     </ul>
