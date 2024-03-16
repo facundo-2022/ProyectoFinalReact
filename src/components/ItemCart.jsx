@@ -35,7 +35,7 @@ export const ItemCart = ({ product }) => {
                 <img src={`${product.img}`} alt={`Imagen de ${product.title}`} className="w-24 h-24 object-cover" />
             </div>
             <div className="flex-1">
-                <h3 className="text-lg font-semibold">{product.title} </h3>
+                <h3 className="text-lg font-semibold">{product.title}</h3>
             </div>
             <div className="flex items-center">
                 <button className="bg-gray-500 text-white px-4 py-2 rounded" onClick={handleDecrement}>
@@ -50,7 +50,7 @@ export const ItemCart = ({ product }) => {
                 <p className="text-lg font-semibold">Subtotal: ${subtotal}</p>
             </div>
             <div className="ml-4">
-                <button className="bg-red-500  text-white px4 py-2 rounded" onClick={() => removeItem(product.id)}>
+                <button className="bg-red-500 text-white px-4 py-2 rounded" onClick={() => removeItem(product.id)}>
                     Eliminar
                 </button>
             </div>
