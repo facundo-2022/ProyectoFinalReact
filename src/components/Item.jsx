@@ -12,7 +12,7 @@ export const Item = ({ product }) => {
     };
 
     return (
-        <div className="bg-yellow-300 p-5 rounded-md">
+ <div className="bg-yellow-300 p-5 rounded-md">
             <div className={`card ${isFlipped ? 'is-flipped' : ''}`} onClick={flipCard}>
                 <div className="thumb">
                     <img src={`${product.img}`} alt={`Imagen de ${product.title}`} />

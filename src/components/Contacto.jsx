@@ -12,11 +12,11 @@ export const Contacto = () => {
           
         </div>
         <div className="p-8">
-          <div className="uppercase tracking-wide text-sm text-yellow-600 font-semibold">Información de Contacto</div>
-          <p className="block mt-1 text-lg leading-tight font-medium text-black">Teléfono: +123456789</p>
-          <p className="block mt-1 text-lg leading-tight font-medium text-black">Ubicación: Dirección, Ciudad, País</p>
-          <p className="block mt-1 text-lg leading-tight font-medium text-black">Día y Horario de Atención: Lunes a Viernes, 9:00AM - 5:00PM</p>
-          <p className="block mt-1 text-lg leading-tight font-medium text-black">Hora de Reparto de Cadete: 12:00PM - 2:00PM</p>
+          <div className="uppercase tracking-wide text-sm text-yellow-600 font-semibold">Pizzeria Mazzanta</div>
+          <p className="block mt-1 text-lg leading-tight font-medium text-black">Teléfono: 3400499164</p>
+          <p className="block mt-1 text-lg leading-tight font-medium text-black">Ubicación: Dorrego e Irigoyen, Villa Constitución</p>
+          <p className="block mt-1 text-lg leading-tight font-medium text-black">Día y Horario de Atención: Miercoles a Domingo, 20:00 a 23:00Hs</p>
+          <p className="block mt-1 text-lg leading-tight font-medium text-black">Pedidos desde las 19Hs - Costo del envíos $800</p>
         </div>
       </div>
     </div>

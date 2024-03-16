@@ -4,7 +4,7 @@ import { useCounter } from '../hooks/useCounter';
 
 export const ItemCart = ({ product }) => {
     const { removeItem, updateItem } = useCarritoContext();
-    const { count, setCount, increment, decrement } = useCounter(product.quantity, product.stock, 1);
+    const { count, setCount } = useCounter(product.quantity, 1, 1); // Inicializa el contador con la cantidad del producto
 
     // Estado local para almacenar el subtotal
     const [subtotal, setSubtotal] = useState(product.priceNormal * product.quantity);
@@ -17,20 +17,17 @@ export const ItemCart = ({ product }) => {
 
     const handleIncrement = () => {
         const newCount = count + 1;
-        if (newCount <= product.stock) {
-            increment();
-            updateItem(product.id, newCount);
-        }
+        setCount(newCount);
+        updateItem(product.id, newCount); // Actualiza la cantidad del producto en el carrito
     };
     
     const handleDecrement = () => {
-        const newCount = count - 1;
-        if (newCount >= 1) {
-            decrement();
-            updateItem(product.id, newCount);
+        if (count > 1) {
+            const newCount = count - 1;
+            setCount(newCount);
+            updateItem(product.id, newCount); // Actualiza la cantidad del producto en el carrito
         }
     };
-    
 
     return (
         <div className="flex items-center p-4 border-gray-300">

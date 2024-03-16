@@ -1,23 +1,19 @@
 import { useState } from "react";
 
-export const useCounter = (minValue = 0, maxValue = 1, step = 1) => {
-    const [count, setCount] = useState(minValue)
+export const useCounter = (initialValue = 0, minValue = 1, maxValue = 100) => {
+    const [count, setCount] = useState(initialValue);
 
     const increment = () => {
-        if (count + step <= maxValue)
-            setCount(count + step)
-    }
+        if (count < maxValue) {
+            setCount(prevCount => prevCount + 1);
+        }
+    };
 
     const decrement = () => {
-        if (count - step >= minValue) {
-            setCount(count - step)
+        if (count > minValue) {
+            setCount(prevCount => prevCount - 1);
         }
-    }
+    };
 
-    const reset = () => {
-        setCount(minValue)
-    }
-
-    return { count, increment, decrement, reset }
-
-}
+    return { count, setCount, increment, decrement };
+};

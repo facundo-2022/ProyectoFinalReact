@@ -10,7 +10,8 @@ import { NotFound } from './components/NotFound';
 import { CarritoProvider } from './context/CartContext.jsx';
 import { Footer } from './components/Footer'
 import { Contacto } from './components/Contacto';
-
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify'
 export const App = () => {
   return (
     <BrowserRouter>

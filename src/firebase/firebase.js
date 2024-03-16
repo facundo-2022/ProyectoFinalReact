@@ -152,63 +152,66 @@ const prods = [
 
 
 export const createProducts = async () => {
-    prods.forEach(async(prod)=> {
-     await addDoc(collection(bdd,"productos"),  {
-        title: prod.title, 
-        priceNormal: prod.priceNormal,
-        pricemedium: prod.pricemedium,
-        img: prod.img,
-        description: prod.description 
+  prods.forEach(async(prod) => {
+      await addDoc(collection(bdd, "productos"), {
+          title: prod.title,
+          priceNormal: prod.priceNormal,
+          pricemedium: prod.pricemedium,
+          img: prod.img,
+          description: prod.description
       })
-    })
-  }
-  
-  export const getProducts = async () => {
-    const productos = await getDocs(collection(bdd, "productos"))
-    const items =  productos.docs.map(prod=>{ return{...prod.data(), id: prod.id}})
-  
+  })
+}
+
+export const getProducts = async () => {
+  const productos = await getDocs(collection(bdd, "productos"))
+  const items = productos.docs.map(prod => { return { ...prod.data(), id: prod.id } })
+
   return items
-  }
-  
-  export const getProduct = async (id) => {
-    const producto = await getDoc(doc(bdd, "productos", id))
-    const item =  { ...producto.data(), id: producto.id}
-  }
+}
 
-
-// Actualizar Producto
+export const getProduct = async (id) => {
+  const producto = await getDoc(doc(bdd, "productos", id))
+  const item = { ...producto.data(), id: producto.id }
+}
 
 export const updateProduct = async (id, info) => {
-    await updateDoc(doc(bdd, "productos", id), info)
+  await updateDoc(doc(bdd, "productos", id), info)
 }
- /* updateProduct('lfvXGkuRZALnSJcYkads',{"pricemedium": 5600,
-    "priceNormal": 7400,
-    "title": 'Margherita',
-    "img": 'https://firebasestorage.googleapis.com/v0/b/pizzeria-mazzanta.appspot.com/o/p10.jpg?alt=media&token=cb9dd752-8e6c-43f9-af52-b26431f20eab',
-    "description": 'Salsa de tomate italinano, mozzarella flor di latte, parmesano, hojas de albahaca y aceite de oliva virgen extra.'
-}).then(rta=> console.log(rta)) 
- */
-// Eliminar producto
 
 export const deleteProduct = async (id) => {
-    await deleteDoc(doc(bdd, "productos", id))
+  await deleteDoc(doc(bdd, "productos", id))
 }
+export const createOrdenCompra = async (cliente, precioTotal, carrito, fecha, numeroOrden) => {
+  console.log("Cliente:", cliente);
+  console.log("Precio Total:", precioTotal);
+  console.log("Carrito:", carrito);
+  console.log("Fecha:", fecha);
+  console.log("Número de Orden:", numeroOrden); // Agregar log para verificar el número de orden
 
+  if (!cliente || !precioTotal || !carrito || !fecha || !numeroOrden) {
+    throw new Error("Alguno de los parámetros necesarios es undefined.");
+  }
 
-export const createOrdenCompra = async (cliente, precioTotal, carrito, fecha) => {
-  const ordenCompra = await addDoc(collection(bdd, "ordenesCompra"), {
+  try {
+    const ordenCompraRef = await addDoc(collection(bdd, "ordenesCompra"), {
       cliente: cliente,
       items: carrito,
       precioTotal: precioTotal,
-      fecha: fecha
-  })
-  return ordenCompra
-}
+      fecha: fecha,
+      numeroOrden: numeroOrden // Agregar el número de orden al documento de la orden de compra
+    });
+
+    // Obtenemos el ID de la orden de compra recién creada y lo devolvemos
+    return ordenCompraRef.id;
+  } catch (error) {
+    // Manejo de errores en caso de que falle la creación de la orden de compra
+    throw new Error("No se pudo crear la orden de compra");
+  }
+};
 
 export const getOrdenCompra = async (id) => {
-  const ordenCompra = await getDoc(doc(bdd, "ordenesCompra", id))
-  const item = { ...ordenCompra.data(), id: ordenCompra.id }
-  return item
-}
-
-getProducts()
+    const ordenCompra = await getDoc(doc(bdd, "ordenesCompra", id))
+    const item = { ...ordenCompra.data(), id: ordenCompra.id }
+    return item
+};
